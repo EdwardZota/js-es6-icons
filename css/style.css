@@ -26,20 +26,24 @@ h1{
     padding: 10px;
 }
 
-#box{
+.box{
     border-radius: 5px;
     width: calc(100% / 5);
     padding: 0 20px;
     margin: 20px 0;
 }
 
-#inner-box{
+.inner-box{
     background-color: white;
     text-align: center;
     padding: 20px 0;
     border-radius: 10px;
 }
 
-#inner-box i {
+.inner-box i {
     font-size: 35px;
+}
+
+.d-none{
+    display: none;
 }
