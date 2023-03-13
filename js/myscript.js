@@ -122,6 +122,12 @@ lista.forEach(lista => {
     allIconsDom.append(createBox(lista));
 });
 
+const arraySelector=[];
+
+createSelectorOption();
+
+console.log(arraySelector);
+
 
 selectorDom.addEventListener('change', function() {
 
@@ -165,7 +171,19 @@ function createBox(lista){
                     <i style="color:#${randomColor};" class="${lista.prefix}solid ${lista.prefix}${lista.name}"></i>
                     <h5>${lista.name}</h5>
                 </div>`;
-
     return box;
 }
 
+
+
+function createSelectorOption (){
+
+    selectorDom.innerHTML+=`<option value="all" selected>all</option>`
+
+    lista.forEach(elemento => {
+        if(!arraySelector.includes(elemento.type)){
+            arraySelector.push(elemento.type);
+            selectorDom.innerHTML+=`<option value="${elemento.type}">${elemento.type}</option>`;
+        }
+    })
+}
