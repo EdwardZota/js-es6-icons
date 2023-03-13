@@ -135,31 +135,14 @@ selectorDom.addEventListener('change', function() {
 
     allIconsDom.innerHTML="";
 
-    if(this.value == 'animal'){
-        lista.filter(elemento =>{
-            if(elemento.type == 'animal'){
+	if(this.value == selectorDom.value){
+		lista.filter(elemento =>{
+            if(elemento.type == selectorDom.value){
                 allIconsDom.append(createBox(elemento));
             }
         });
+	}
 
-    }else if(this.value == 'vegetable'){
-        lista.filter(elemento =>{
-            if(elemento.type == 'vegetable'){
-                allIconsDom.append(createBox(elemento));
-            }
-        });
-    }else if(this.value == 'user'){
-        lista.filter(elemento =>{
-            if(elemento.type == 'user'){
-                allIconsDom.append(createBox(elemento));
-            }
-        });
-    }else{
-        lista.forEach(lista => {
-            allIconsDom.append(createBox(lista));
-        });
-    }
-    
 });
 
 function createBox(lista){
