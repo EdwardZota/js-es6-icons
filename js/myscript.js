@@ -135,14 +135,23 @@ selectorDom.addEventListener('change', function() {
 
     allIconsDom.innerHTML="";
 
-	if(this.value == selectorDom.value){
-		lista.filter(elemento =>{
+    if(this.value == selectorDom.value){
+        lista.filter(elemento =>{
             if(elemento.type == selectorDom.value){
                 allIconsDom.append(createBox(elemento));
             }
         });
-	}
 
+    }
+	if(this.value == 'all'){
+		
+		allIconsDom.innerHTML="";
+        lista.forEach(lista => {
+			allIconsDom.append(createBox(lista));
+		});
+
+    }
+    
 });
 
 function createBox(lista){
