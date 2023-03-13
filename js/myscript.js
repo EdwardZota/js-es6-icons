@@ -121,7 +121,7 @@ lista.forEach(lista => {
     
     allIconsDom.innerHTML+=`<div id="box">
                                 <div id="inner-box">
-                                    <i class="${lista.prefix}solid ${lista.prefix}${lista.name}"></i>
+                                    <i style="color:${lista.color};" class="${lista.prefix}solid ${lista.prefix}${lista.name}"></i>
                                     <h5>${lista.name}</h5>
                                 </div>
                             </div>`
