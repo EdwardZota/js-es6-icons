@@ -157,12 +157,15 @@ selectorDom.addEventListener('change', function() {
 });
 
 function createBox(lista){
+
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
     const box =document.createElement('div');
     box.classList.add('box');
     box.innerHTML=`<div class="inner-box">
-                    <i style="color:${lista.color};" class="${lista.prefix}solid ${lista.prefix}${lista.name}"></i>
+                    <i style="color:#${randomColor};" class="${lista.prefix}solid ${lista.prefix}${lista.name}"></i>
                     <h5>${lista.name}</h5>
                 </div>`;
 
     return box;
 }
+
