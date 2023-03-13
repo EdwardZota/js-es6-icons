@@ -111,5 +111,18 @@ const lista=[
 		family: 'fas',
 		color: 'blue'
 	}
+
 ];
 
+const allIconsDom = document.getElementById('all-icons');
+
+
+lista.forEach(lista => {
+    
+    allIconsDom.innerHTML+=`<div id="box">
+                                <div id="inner-box">
+                                    <i class="${lista.prefix}solid ${lista.prefix}${lista.name}"></i>
+                                    <h5>${lista.name}</h5>
+                                </div>
+                            </div>`
+});
